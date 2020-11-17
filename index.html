@@ -1,9 +1,42 @@
-<!doctype html>
-<html>
-<head>
-  <title>testing</title>
-</head>
-<body>
-  <p>testing</p>
-</body>
-</html>
+---
+layout: default
+title: home
+---
+<script src="//cdn.jsdelivr.net/npm/eruda"></script>
+<script>eruda.init();</script>
+<link rel='stylesheet' href="assets/css/main.css">
+<div class='landing'>
+  <h1>Joel Lithgow</h1>
+  <h2>Random seed string</h2>
+  <img src="assets/media/test.jpg" alt='Testing image.' class='landing-image'>
+</div>
+<div id='about'>
+  <p class='about-description'>Master of none, jack of all trades.</p>
+</div>
+<div id='projects'>
+  <p class='projects-title'>Recent projects</p>
+  <p class='projects-description'>These are some recent projects I've worked on.</p>
+</div>
+<div id='newsroom'>
+  <p class='newsroom-description'>Posts by/about/from me.</p>
+  <ul class='newsroom-list'>
+    <li class='newsroom-item'>
+      <p>Some text</p>
+    </li>
+  </ul>
+</div>
+<div id='contact'>
+  <h3>Contact</h3>
+  <ul class='contact-list'>
+    <li>
+      <p>Email: </p>
+      <a href='mailto:joelnotlithgow@gmail.com'>
+        <p>joelnotlithgow@gmail.com</p>
+      </a>
+    </li>
+  </ul>
+</div>
+    <script>
+      console.log("testing");
+      console.log("{{site.url}}")
+    </script>

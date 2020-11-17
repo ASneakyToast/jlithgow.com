@@ -1,0 +1,14 @@
+---
+title: artwork__all
+layout: default
+---
+All artwork...
+<ul>
+  {% for artwork in site.artwork %}
+    <li>
+      <p>{{ artwork.title }}</p>
+      <p>{{ artwork.content }}</p>
+      <a href="{{ artwork.url }}">Link</a>
+    </li>
+  {% endfor %}
+</ul>
