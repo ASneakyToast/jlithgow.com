@@ -1,0 +1,8 @@
+---
+layout: default
+title: Artwork
+---
+Artwork home page tezt, specifically for the url.
+{% for artwork in site.artwork %}
+<a href="{{ artwork.url }}">{{ artwork.title }}</a>
+{% endfor %}
