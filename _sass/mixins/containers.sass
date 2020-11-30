@@ -1,0 +1,27 @@
+.container
+  background-color: $gray
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: auto
+  grid-template-areas: "header" "body" "footer"
+  column-gap: 16px
+  row-gap: 8px
+  padding: 16px
+  
+  &__header
+    background-color: $yellow
+    box-shadow: $shadow-3dp
+    color: $black
+    font-size: 18px
+    grid-area: header
+    padding: 8px 16px 8px 16px
+    margin-left: -16px
+
+  &__body
+    color: $yellow
+    grid-area: body
+
+  &__footer
+    grid-area: footer
+    justify-self: end
+    margin: 8px 0

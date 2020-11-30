@@ -1,0 +1,33 @@
+---
+---
+$baseurl: "{{ site.url }}"
+@import "variables"
+@import "mixins/buttons"
+@import "mixins/containers"
+@import "mixins/syantax"
+
+.about
+  &__text
+    display: inline-block
+    width: 50%
+    margin: 8px 0
+  &__avatar
+    display: inline-block
+    float: right
+  &__button
+    justify-self: start
+
+.artwork
+  &__type
+    display: inline-block
+    font-weight: lighter
+    margin: 8px 0
+  &__title
+    display: inline-block
+    margin: 8px 4px
+    font-size: 18px
+  &__image
+    width: 100%
+    max-height: 150px
+    box-shadow: $shadow-2dp
+    margin: 4px 0

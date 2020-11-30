@@ -1,8 +1,0 @@
----
----
-$baseurl: "{{ site.url }}";
-@import "home";
-
-.landing {
-  background-image: url($baseurl+"/assets/media/tile_bg1.jpg");
-}
