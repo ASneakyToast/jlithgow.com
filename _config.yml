@@ -1,3 +1,5 @@
 collections:
   artwork:
     output: true
+plugins:
+  - asset_path_tag
