@@ -8,4 +8,3 @@ tags: [sculpture]
 This is the guy I made at Tanner's.
 ![Image](../assets/media/artwork__rock_experiment_1--01.jpg)
 ![Image](../assets/media/artwork__rock_experiment_1--02.jpg)
-![Image]({{ media-item rock_experiment_1 1 thumbnail }})
