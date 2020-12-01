@@ -1,3 +1,6 @@
+destination:
+  ../dist
+
 collections:
   artwork:
     output: true
