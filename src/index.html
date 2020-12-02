@@ -20,24 +20,17 @@ title: home
 <div class="artwork container container__theme_secondary">
   <h2 class='container__header'>Artwork</h2>
   <div class="container__body">
-    <div class="artwork__latest">
+    
+    <div class="container__block">
       {% assign artwork__latest = site.artwork.last %}
-      <h3 class="artwork__type">/latest <span class="syantax-colon">:</span></h3>
-      <a href="{{ artwork__latest.url }}">
-        <h4 class="artwork__title button-inline">{{ artwork__latest.title }}</h4>
-      </a>
-      <img class="artwork__image" src="{% asset_path thumbnail.jpg /artwork/rock_experiment_1 %}">
-      <p>{{ artwork.excerpt }}</p>
-      <ul class="artwork__latest_tags">
-        {% for tag in artwork__lastest.tags %}
-          <li class="artwork__latest_tag">{{ tag.name }}</li>
-        {% endfor %}
-      </ul>
+      {% include artwork-item.html label="latest" artwork=artwork__latest %}
     </div>
-    <div class="artwork__featured">
-      {% assign artwork__featured = site.artwork | where: "featured", true %}
-      <h4>{{ artwork__featured.title }}</h4>
+
+    <div class="container__block">
+      {% assign artwork__featured = site.artwork | where_exp: "item", "item.featured == true and item != site.artwork.last" | sample %}
+      {% include artwork-item.html label="featured" artwork=artwork__featured %}
     </div>
+
   </div>
   <button class="button-primary container__footer">&gt; see all artwork</button>
 </div>

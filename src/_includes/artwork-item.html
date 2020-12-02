@@ -1,0 +1,15 @@
+<div class="artwork_item">
+  <h3 class="artwork_item__type">/{{ include.label }} <span class="syantax-colon">:</span></h3>
+  <a href="{{ include.artwork.url }}">
+    <h4 class="artwork_item__title button-inline">{{ include.artwork.title }}</h4>
+  </a>
+  {% if include.artwork.thumbnail == true %}
+    <img class="artwork_item__image" src="{% asset_path thumbnail.jpg {{ include.artwork.id }} %}">
+  {% endif %}
+  <p>{{ include.artwork.excerpt }}</p>
+  <ul class="artwork_item__latest_tags">
+    {% for tag in include.tags %}
+      <li class="artwork_item__latest_tag">{{ tag }}</li>
+    {% endfor %}
+  </ul>
+</div>

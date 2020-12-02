@@ -1,6 +1,14 @@
-destination:
-  ../dist
-
 collections:
   artwork:
     output: true
+
+destination:
+  ../dist
+
+defaults:
+  - scope:
+      path: ""
+      type: "artwork"
+    values:
+      thumbnail: true
+      layout: "artwork"

@@ -1,8 +1,9 @@
 ---
-title: "walker"
+title: walker
 date: 2020-02-10
 description: "This is a description?"
-layout: artwork
+featured: true
+thumbnail: false
 categories: hamagucchi-2020
 tags: print-media
 ---
