@@ -1,0 +1,21 @@
+---
+title: artwork__all
+layout: default
+---
+<script src="//cdn.jsdelivr.net/npm/eruda"></script>
+<script>eruda.init();</script>
+
+<link rel="stylesheet" src="/assets/css/artworks.css">
+
+
+<div class="container artworks">
+  <h2 class="container__header">All Artwork</h2>
+
+  <ul class="container__body artworks__list">
+    {% for artwork in site.artwork %}
+      <li class="container__block artworks__item">
+        {% include artwork-item.html artwork=artwork %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
