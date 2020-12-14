@@ -1,0 +1,6 @@
+<a href="{{ include.artwork.url }}">
+  <div class="artwork_card">
+    <img src="{% asset_path card.jpg {{ include.artwork.id }} %}">
+    <h4 class="artwork_card__title">{{ include.artwork.title }}</h4>
+  </div>
+</a>
