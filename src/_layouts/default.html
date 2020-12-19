@@ -6,8 +6,12 @@
     <title>Joel Lithgow</title>
   </head>
   <body>
-    {% include header.html %}
-    {{ content }}
-    {% include footer.html %}
+    <div class="wrapper">
+      {% include header.html %}
+      <div class="wrapper__content">
+        {{ content }}
+      </div>
+      {% include footer.html %}
+    </div>
   </body>
 </html>
