@@ -2,10 +2,8 @@
 layout: default
 title: home
 ---
-<!--
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
--->
 
 <link rel='stylesheet' href="assets/css/home.css">
 
@@ -35,29 +33,21 @@ title: home
 </div>
 -->
 
-<!--
-<div class="artwork container container__theme_secondary">
+<div class="artwork containerz">
   <a href="/artwork">
-    <h2 class='container__header'>/Artwork</h2>
+    <h2 class='banner'>/Artwork</h2>
   </a>
-  <div class="container__body">
-    
-    <div class="container__block">
-      {% assign artwork__latest = site.artwork.last %}
-      {% include artwork-item.html label="latest" artwork=artwork__latest %}
-    </div>
 
-    <div class="container__block">
-      {% assign artwork__featured = site.artwork | where_exp: "item", "item.featured == true and item != site.artwork.last" | sample %}
-      {% include artwork-item.html label="featured" artwork=artwork__featured %}
-    </div>
+  {% assign artwork__latest = site.artwork.last %}
+  {% include artwork-item.html label="latest" artwork=artwork__latest %}
 
-  </div>
+  {% assign artwork__featured = site.artwork | where_exp: "item", "item.featured == true and item != site.artwork.last" | sample %}
+  {% include artwork-item.html label="featured" artwork=artwork__featured %}
+
   <a href="artwork/artworks.html" class="container__footer">
     <button class="button-primary">> see all artwork</button>
   </a>
 </div>
--->
 
 <div class="social container">
   <a href="/social.html">

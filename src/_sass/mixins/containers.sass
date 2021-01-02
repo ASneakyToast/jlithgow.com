@@ -4,7 +4,7 @@
   background-color: $gray
   display: grid
   grid-template-columns: 1fr
-  grid-template-rows: auto
+  grid-template-rows: auto 1fr auto
   grid-template-areas: "header" "body" "footer"
   column-gap: 16px
   row-gap: 8px
@@ -33,3 +33,13 @@
 
   &__block
     margin-bottom: 16px
+
+.containerz
+  border-top: 1px solid $gray-light
+  border-bottom: 1px solid $gray-dark
+  background-color: $gray
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: auto
+  column-gap: 16px
+  row-gap: 8px
