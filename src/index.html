@@ -2,8 +2,10 @@
 layout: default
 title: home
 ---
+{% comment %}
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
+{% endcomment %}
 
 <link rel='stylesheet' href="assets/css/home.css">
 
@@ -44,7 +46,7 @@ title: home
   {% assign artwork__featured = site.artwork | where_exp: "item", "item.featured == true and item != site.artwork.last" | sample %}
   {% include artwork-item.html label="featured" artwork=artwork__featured %}
 
-  <a href="artwork/artworks.html" class="container__footer">
+  <a href="artwork/artworks.html" class="">
     <button class="button-primary">> see all artwork</button>
   </a>
 </div>
