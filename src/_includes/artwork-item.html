@@ -1,15 +1,22 @@
-<div class="artwork_item containerz containerz--flat">
-  <h3 class="artwork_item__type">- {{ include.label }} <span class="syantax-colon">:</span></h3>
-  <a href="{{ include.artwork.url }}">
-    <h4 class="artwork_item__title button-inline">{{ include.artwork.title }}</h4>
-  </a>
+<div class="artwork_item container-small">
+  <div>
+    <h3 class="artwork_item__type">- {{ include.type }}<span class="syantax-colon">:</span></h3>
+    <a href="{{ include.artwork.url }}">
+      <h4 class="artwork_item__title button-inline">{{ include.artwork.title }}</h4>
+    </a>
+  </div>
+
   {% if include.artwork.thumbnail == true %}
     <img class="artwork_item__image" src="{% asset_path thumbnail.jpg {{ include.artwork.id }} %}">
   {% endif %}
-  <p>{{ include.artwork.excerpt }}</p>
-  <ul class="artwork_item__latest_tags">
-    {% for tag in include.tags %}
-      <li class="artwork_item__latest_tag">{{ tag }}</li>
-    {% endfor %}
-  </ul>
+
+  {{ include.artwork.excerpt }}
+
+  {% if include.artwork.tags != empty %}
+    <ul class="artwork_item__tags">
+      {% for tag in include.artwork.tags %}
+        <li class="artwork_item__tag">{{ tag }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 </div>
