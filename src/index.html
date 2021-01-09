@@ -2,28 +2,21 @@
 layout: default
 title: home
 ---
-{% comment %}
-<script src="//cdn.jsdelivr.net/npm/eruda"></script>
-<script>eruda.init();</script>
-{% endcomment %}
-
 <link rel='stylesheet' href="assets/css/home.css">
 
-
-<div class="about container">
-  <a href="/about.html">
-    <h2 class="container__header">/Joel Lithgow</h2>
+<div class="about containerz">
+  <a class="containerz__header" href="/about.html">
+    <h2 class="banner">> Joel Lithgow</h2>
   </a>
-  <div class="container__body">
+  <div>
     <img src="assets/media/avatar__1.jpg" alt='Portrait photo.' class='about__avatar'>
     <h3 class="about__text">Jack of all trades,<br>master of none.</h3>
     <p class="about__text">artist, designer, developer, I like to learn every part of the process and something more and stuff so lik eyeah should not get so caught up on this par of it.</p>
   </div>
-  <a href="/about.html" class="container__footer about__button">
-    <button class="button-secondary">> learn more about me</button>
+  <a href="/about.html">
+    <button class="button-secondary">learn more about me</button>
   </a>
 </div>
-
 <!--
 <div class="latest container">
   <h2 class="container__header">/Latest</h2>
@@ -37,7 +30,7 @@ title: home
 
 <div id="artwork" class="artwork containerz">
   <a href="/artwork" class="containerz__header">
-    <h2 class='banner'>/Artwork</h2>
+    <h2 class='banner'>/ Artwork</h2>
   </a>
 
   {% assign artwork__latest = site.artwork.last %}
@@ -47,15 +40,15 @@ title: home
   {% include artwork-item.html type="featured" artwork=artwork__featured %}
 
   <a href="artwork/artworks.html" class="containerz__footer">
-    <button class="button-primary">> see all artwork</button>
+    <button class="button-primary">see all artwork</button>
   </a>
 </div>
 
-<div class="social container">
-  <a href="/social.html">
-    <h2 class="container__header">/Social</h2>
+<div class="social containerz">
+  <a class="containerz__header" href="/social.html">
+    <h2 class="banner">/ Social</h2>
   </a>
-  <ul class="social__list container__body">
+  <ul class="social__list">
     <li class="social__item">
       <h3>- email <span class="syantax-colon">:</span></h3>
       <a href='mailto:joelnotlithgow@gmail.com'>

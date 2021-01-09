@@ -1,4 +1,12 @@
+@function tint($color, $percentage)
+  @return mix(white, $color, $percentage)
+
+@function shade($color, $percentage)
+  @return mix(black, $color, $percentage)
+
 $yellow: #FFC845 
+$yellow--dark: shade($yellow, 25%)
+$yellow--light: tint($yellow, 25%)
 $white: #FFFFFF
 $light_gray-light: #666666
 $light_gray: #555555

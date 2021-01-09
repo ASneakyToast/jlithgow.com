@@ -5,16 +5,20 @@
 @import "includes/header"
 @import "includes/footer"
 
-html, body
+html
   height: 100%
-  width: 100%
+  width: 100vw
+
+html, body
   padding: 0
   margin: 0
 
 body
   background-color: $black
+  height: 100%
+  width: 100%
 
-p, button, ul, a, h1, h2, h3, h4, img
+p, button, ul, a, h1, h2, h3, h4, h5, img
   margin: 0
   padding: 0
 
@@ -29,13 +33,11 @@ ul
   list-style: none
 
 
-h1, h2, h3, h4, button, a
+h1, h2, h3, button, a
   font-family: $font-header
 
-h3, h4
-  font-size: 18px
-
 h3
+  font-size: 18px
   font-weight: lighter
   color: $yellow
 
@@ -44,7 +46,7 @@ h1
   font-size: 20px
   font-weight: 200
 
-button, p, li
+button, li, h6
   font-size: 16px
   color: $yellow
 
@@ -52,6 +54,23 @@ p, li
   font-family: $font-body
   font-weight: lighter
 
+p
+  font-size: 16px
+  font-weight: 200
+  font-family: $font-body 
+  color: $yellow--dark
+
 h2
   text-decoration: inherit
   font-size: 20px
+  
+h4
+  color: $yellow
+  font-size: 18px
+  font-weight: lighter
+  font-family: $font-header
+
+h5
+  font-size: 16px
+  font-weight: lighter
+  font-family: $font-body

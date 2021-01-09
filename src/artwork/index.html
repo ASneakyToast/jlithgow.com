@@ -2,7 +2,19 @@
 layout: default
 title: Artwork
 ---
-Artwork home page tezt, specifically for the url.
-{% for artwork in site.artwork %}
-<a href="{{ artwork.url }}">{{ artwork.title }}</a>
-{% endfor %}
+<link rel="stylesheet" href="/assets/css/artwork.css">
+
+<div class="containerz">
+  <a href="/artwork" class="containerz__header">
+    <h2 class="banner">> Artwork</h2>
+  </a>
+  <div class="container-small">
+    <h4>Artist Statement</h4>
+    <h5>updated: Jan 09, 2021</h5>
+    <p>Wether I am the artist or just the machine I could not tell you. My work usually results in (describe print projects) or (describe machine god sculptures). Being born after "when it changed", my life has (un?)questionaly revolved around technology and machines (maybe instad of tech/machines say something like [those that require pieces together to function or some shit]. Something about divine artwork and setting uo the machine god ideaology.</p>
+  </div>
+
+  <a href="/artwork/collections" class="containerz__header">
+    <h2 class="banner">/ Collections</h2>
+  </a>
+</div>
