@@ -1,6 +1,7 @@
 ---
 title: artwork__all
 layout: default
+permalink: /artworks/
 ---
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
@@ -8,23 +9,24 @@ layout: default
 <link rel="stylesheet" href="/assets/css/artworks.css">
 
 
-<div class="container artworks">
-  <div class="container__header">
-    <h2>All Artwork</h2>
-    <h3>{{ site.artwork | size }} results</h3>
-  </div>
+<div class="containerz artworks">
+  <a href="/artwork/" class="banner">
+    <h2 class="">> Artwork</h2>
+    <h3>-- All</h3>
+  </a>
+  <h3>{{ site.artwork | size }} results
+    <!--<button class="button-secondary">Filter</button>-->
+  </h3>
 
-  <div class="container__body">
-    <ul class="artworks__list">
+  <div class="">
+    <ul class="container-small">
       {% for artwork in site.artwork %}
-        <li class="container__block artworks__item">
-          {% include artwork-card.html artwork=artwork %}
-        </li>
+        <li>{% include artwork-list.html artwork=artwork %}</li>
       {% endfor %}
     </ul>
   </div>
 
-  <a href="/artwork" class="container__footer">
+  <a href="/artwork" class="containerz__footer">
     <p class="button-inline">read about my art practice</p>
   </a>
 </div>

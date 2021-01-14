@@ -17,4 +17,33 @@ title: Artwork
   <a href="/artwork/collections" class="containerz__header">
     <h2 class="banner">/ Collections</h2>
   </a>
+  <div class="container-small">
+    {% assign collections =  site.artwork | map: 'collections' | join: ','  | split: ',' | uniq %}
+    {% for collection in collections %}
+    <p>
+      {{ collection }}
+    </p>
+    {% endfor %}
+  </div>
+
+  
+  <a href="/artworks" class="containerz__header">
+    <h2 class="banner">/ Artworks</h2>
+  </a>
+  <div class="container-small">
+    <h3>Sample</h3>
+    {% assign artwork-sample = site.artwork | sample %}
+    {% include artwork-card.html artwork=artwork-sample %}
+  </div>
+  <hr></hr>
+  <ul class="container-small">
+    <h3>Latest( 3 )</h3>
+    {% for artwork in site.artwork limit:3 %}
+    <li>{% include artwork-item.html artwork=artwork %}</li>
+    {% endfor %}
+  </ul>
+  <hr></hr>
+  <a href="/artworks" class="containerz__footer">
+    <button class="button-primary">See all Artwork</button>
+  </a>
 </div>

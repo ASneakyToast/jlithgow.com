@@ -7,7 +7,9 @@
   </div>
 
   {% if include.artwork.thumbnail == true %}
+  <a href="{{ include.artwork.url }}">
     <img class="artwork_item__image" src="{% asset_path thumbnail.jpg {{ include.artwork.id }} %}">
+  </a>
   {% endif %}
 
   {{ include.artwork.excerpt }}
