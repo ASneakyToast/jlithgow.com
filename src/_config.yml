@@ -1,9 +1,14 @@
 collections:
   artwork:
     output: true
+  artwork-collection:
+    output: true
+    permalink: /artwork/:collection/:name/
 
 destination:
   ../dist
+
+permalink: pretty
 
 defaults:
   - scope:

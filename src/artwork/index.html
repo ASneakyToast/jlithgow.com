@@ -20,9 +20,9 @@ title: Artwork
   <div class="container-small">
     {% assign collections =  site.artwork | map: 'collections' | join: ','  | split: ',' | uniq %}
     {% for collection in collections %}
-    <p>
-      {{ collection }}
-    </p>
+    <a href="/artwork/collection/{{ collection }}">
+      <p>{{ collection }}</p>
+    </a>
     {% endfor %}
   </div>
 

@@ -1,0 +1,17 @@
+---
+layout: default
+title: collections
+permalink: /artwork/collections/
+---
+<link rel="stylesheet" href="/assets/css/collections.css"></link>
+
+<div class="containerz">
+  <h2 class="banner">> Collections</h2>
+  <ul>
+    {% assign collections =  site.artwork | map: 'collections' | join: ','  | split: ',' | uniq %}
+    {% assign collectionz = site.artwork-collection %}
+    {% for collection in collectionz %}
+      <li>Test {% include collection-list.html collection=collection%}</li>
+    {% endfor %}
+  </ul>
+</div>
