@@ -19,14 +19,10 @@ title: Artwork
     <h2 class="banner">/ Collections</h2>
   </a>
   <div class="container-small">
-    {% assign collections =  site.artwork | map: 'collections' | join: ','  | split: ',' | uniq %}
-    {% for collection in collections %}
-    <a href="/artwork/collection/{{ collection }}">
-      <p>{{ collection }}</p>
-    </a>
+    {% for collection in site.artwork-collection %}
+      {% include collection-list.html collection=collection %}
     {% endfor %}
   </div>
-
   
   <a href="/artworks" class="containerz__header">
     <h2 class="banner">/ Artworks</h2>

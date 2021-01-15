@@ -3,7 +3,7 @@ collections:
     output: true
   artwork-collection:
     output: true
-    permalink: /artwork/:collection/:name/
+    permalink: /artwork/collection/:name/
 
 destination:
   ../dist

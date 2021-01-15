@@ -14,7 +14,7 @@ permalink: /artwork/collections/
     {% assign collections =  site.artwork | map: 'collections' | join: ','  | split: ',' | uniq %}
     {% assign collectionz = site.artwork-collection %}
     {% for collection in collectionz %}
-      <li>Test {% include collection-list.html collection=collection%}</li>
+      <li>{% include collection-list.html collection=collection %}</li>
     {% endfor %}
   </ul>
 </div>
