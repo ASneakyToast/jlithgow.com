@@ -4,10 +4,11 @@
 @import "wrapper"
 @import "includes/header"
 @import "includes/footer"
+@import "includes/menu"
 
 html
-  height: 100%
-  width: 100vw
+  height: 100vh
+  width: 100%
 
 html, body
   padding: 0
@@ -15,7 +16,7 @@ html, body
 
 body
   background-color: $black
-  height: 100%
+  height: 100vh
   width: 100%
 
 p, button, ul, a, h1, h2, h3, h4, h5, img
@@ -24,9 +25,13 @@ p, button, ul, a, h1, h2, h3, h4, h5, img
 
 a
   text-decoration: none
+  color: inherit
 
 img
   display: block
+  width: 100%
+
+svg
   width: 100%
 
 ul
@@ -36,34 +41,36 @@ ul
 h1, h2, h3, button, a
   font-family: $font-header
 
-h3
-  font-size: 18px
-  font-weight: lighter
+button, li, h6
+  font-size: 16px
   color: $yellow
+
+li
+  font-family: $font-body
+  font-weight: lighter
+
+p
+  font-size: 16px
+  font-weight: lighter
+  font-family: $font-body 
+  color: $yellow--dark
 
 h1
   color: $yellow
   font-size: 20px
   font-weight: 200
 
-button, li, h6
-  font-size: 16px
-  color: $yellow
-
-p, li
-  font-family: $font-body
-  font-weight: lighter
-
-p
-  font-size: 16px
-  font-weight: 200
-  font-family: $font-body 
-  color: $yellow--dark
-
 h2
   text-decoration: inherit
   font-size: 20px
+  font-weight: 600
+  font-family: $font-header
   
+h3
+  font-size: 18px
+  font-weight: lighter
+  color: $yellow
+
 h4
   color: $yellow
   font-size: 18px

@@ -1,0 +1,32 @@
+.nav-drawer
+  display: none
+  height: 100vh
+  width: 100%
+  position: fixed
+  &--open
+    display: flex
+
+  &__nav
+    background-color: $gray
+    flex: 3
+    color: $yellow
+    box-shadow: $shadow-6dp
+
+    & section
+      display: grid
+      row-gap: 8px
+
+  &__offclick
+    background: rgba(0,0,0,0.5)
+    flex: 1
+
+.nav-bottom 
+  box-sizing: border-box
+  display: grid
+  grid-template-columns: auto 1fr auto
+  background-color: $yellow
+  width: 100%
+  position: sticky
+  bottom: 0
+  box-shadow: $shadow-6dp--flipped
+  padding: 8px
