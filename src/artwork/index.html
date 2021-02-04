@@ -28,8 +28,8 @@ title: Artwork
     <h2 class="banner">/ Artworks</h2>
   </a>
   <div class="container-small">
-    <h3>Sample</h3>
     {% assign artwork-sample = site.artwork | sample %}
+    <h3>Sample ( {{ artwork-sample.title }} )</h3>
     {% include artwork-card.html artwork=artwork-sample %}
   </div>
   <hr></hr>
