@@ -1,24 +1,29 @@
-<div class="artwork_item container-small">
-  <div>
-    <h3 class="artwork_item__type">- {{ include.type }}<span class="syantax-colon">:</span></h3>
-    <a href="{{ include.artwork.url }}">
-      <h4 class="artwork_item__title button-inline">{{ include.artwork.title }}</h4>
-    </a>
-  </div>
+{% assign label = include.label %}
+{% assign artwork = include.artwork %}
 
-  {% if include.artwork.thumbnail == true %}
-  <a href="{{ include.artwork.url }}">
-    <img class="artwork_item__image" src="{% asset_path thumbnail.jpg {{ include.artwork.id }} %}">
+<article class="artwork_item container-small">
+  <section>
+    {% if include.label %}
+      <h3 class="artwork_item__type">- {{ label }}<span class="syantax-colon">:</span></h3>
+    {% endif %}
+    <a href="{{ artwork.url }}">
+      <h4 class="artwork_item__title button-inline">{{ artwork.title }}</h4>
+    </a>
+  </section>
+
+  {% if artwork.thumbnail == true %}
+  <a href="{{ artwork.url }}">
+    <img class="artwork_item__image" src="{% asset_path thumbnail.jpg {{ artwork.id }} %}">
   </a>
   {% endif %}
 
-  {{ include.artwork.excerpt }}
+  {{ artwork.excerpt }}
 
-  {% if include.artwork.tags != empty %}
+  {% if artwork.tags != empty %}
     <ul class="artwork_item__tags">
-      {% for tag in include.artwork.tags %}
+      {% for tag in artwork.tags %}
         <li class="artwork_item__tag">{{ tag }}</li>
       {% endfor %}
     </ul>
   {% endif %}
-</div>
+</article>
