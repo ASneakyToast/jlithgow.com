@@ -1,7 +1,14 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<div>
-  {{ page.content }}
+<script src="//cdn.jsdelivr.net/npm/eruda"></script>
+<script>eruda.init();</script>
+
+<link rel="stylesheet" href="/assets/css/artwork-detail.css">
+
+<div class="containerz">
+  <h2>{{ page.title }}</h2>
+  <div>
+    {{ page.content }}
+  </div>
 </div>
