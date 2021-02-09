@@ -2,7 +2,7 @@
 date: 2020-11-16T21:22:16-08:00
 title: rock experiment 1
 modified: 2020-11-16T21:23:24-08:00
-featured: true
+missing-images: false
 tags: sculpture wires
 ---
 My first experimentation with stone carving.

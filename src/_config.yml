@@ -15,5 +15,5 @@ defaults:
       path: ""
       type: "artwork"
     values:
-      thumbnail: true
+      missing-images: false
       layout: "artwork"

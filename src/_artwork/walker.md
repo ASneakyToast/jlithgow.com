@@ -3,7 +3,7 @@ title: walker
 date: 2020-02-10
 description: "This is a description?"
 featured: true
-thumbnail: false
+missing-images: true
 collections: hamagucchi-2020
 tags: print-media
 ---
