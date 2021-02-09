@@ -8,4 +8,5 @@ series:
 collections:
 tags:
 featured: false
+published: false
 ---
