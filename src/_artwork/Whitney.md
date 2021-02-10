@@ -7,6 +7,5 @@ alt-text: Screen printed plastic vaccumed-formed onto circuit boards to display 
 series: Circuiture
 collections: Hamagucchi-2020 Junior-Review
 tags: print-media
-missing-images: true
 featured: false
 ---
