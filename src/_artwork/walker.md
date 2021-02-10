@@ -4,7 +4,7 @@ date: 2020-02-10
 description: "This is a description?"
 alt-text: none
 flavor-text: none
-series:
+series: Circuitures
 collections: hamagucchi-2020
 tags: print-media
 featured: true
