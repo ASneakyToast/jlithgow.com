@@ -1,10 +1,12 @@
 ---
-title: walker
+title: Walker
 date: 2020-02-10
 description: "This is a description?"
-featured: true
-missing-images: true
+alt-text: none
+flavor-text: none
+series:
 collections: hamagucchi-2020
 tags: print-media
+featured: true
 ---
 This is where i talk about the artwork alone. Not as a series or a portfolio but kinda more critique like, this is what i did this js the statment anf blah blah blah.
