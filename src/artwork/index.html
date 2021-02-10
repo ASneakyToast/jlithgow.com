@@ -35,7 +35,8 @@ title: Artwork
   <hr></hr>
   <ul class="container-small">
     <h3>Latest( 3 )</h3>
-    {% for artwork in site.artwork limit:3 %}
+    {% assign artwork-latest = site.artwork | sort: 'date' | reverse %}
+    {% for artwork in artwork-latest limit:3 %}
       <li>{% include artwork-item.html artwork=artwork %}</li>
     {% endfor %}
   </ul>
