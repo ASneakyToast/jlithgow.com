@@ -32,12 +32,18 @@ title: home
   <a href="/artwork" class="containerz__header">
     <h2 class='banner'>/ Artwork</h2>
   </a>
+  
+  {% assign artwork__featured = site.artwork | where_exp: "item", "item.featured == true and item != site.artwork.last" | sample %}
+  <h3>Featured( {{ artwork__featured.title }} )</h3>
+  {% include artwork-card.html type="featured" artwork=artwork__featured %}
+
+  <hr></hr>
 
   {% assign artwork__latest = site.artwork.last %}
-  {% include artwork-item.html type="latest" artwork=artwork__latest %}
-
-  {% assign artwork__featured = site.artwork | where_exp: "item", "item.featured == true and item != site.artwork.last" | sample %}
-  {% include artwork-item.html type="featured" artwork=artwork__featured %}
+  <h3>Latest( {{ artwork__latest.date | date: "%m-%d-%y" }} )</h3>
+  {% include artwork-item.html type="latest" artwork=artwork__latest meta=false%}
+  
+  <hr></hr>
 
   <a href="/artwork/" class="containerz__footer">
     <button class="button-primary">more about my practice</button>

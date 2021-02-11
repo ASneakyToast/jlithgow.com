@@ -1,4 +1,9 @@
 {% assign label = include.label %}
+{% if include.meta == false %}
+  {% assign meta = include.meta %}
+{% else %}
+  {% assign meta = true %}
+{% endif %}
 {% assign artwork = include.artwork %}
 
 <article class="artwork_item container-small">
@@ -19,11 +24,13 @@
 
   {{ artwork.excerpt }}
 
-  {% if artwork.tags != empty %}
-    <ul class="artwork_item__tags">
-      {% for tag in artwork.tags %}
-        <li class="artwork_item__tag">{{ tag }}</li>
-      {% endfor %}
-    </ul>
+  {% if meta == true %}
+    {% if artwork.tags != empty %}
+      <ul class="artwork_item__tags">
+        {% for tag in artwork.tags %}
+          <li class="artwork_item__tag">{{ tag }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
   {% endif %}
 </article>
