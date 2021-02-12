@@ -1,11 +1,11 @@
 {% assign artwork = include.artwork %}
 
 <a href="{{ artwork.url }}">
-  <article class="artwork_card">
+  <article class="artwork-promo">
     <img src="{% asset_path cover.jpg {{ artwork.id }} %}"></img>
-    <section class="container-inline artwork_card__meta">
-      <h5 class="artwork_card__date">{{ artwork.date | date: "%y%m%d"}} |<h5>
-      <h4 class="artwork_card__title">{{ artwork.title }}</h4>
+    <section class="container-inline __meta">
+      <h5 class="__date">{{ artwork.date | date: "%y%m%d"}} |</h5>
+      <h4 class="__title">{{ artwork.title }}</h4>
       <div></div>
     <section>
   </article>
