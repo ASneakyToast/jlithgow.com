@@ -5,7 +5,10 @@ layout: default
 
 <div class="containerz">
   <h2 class="banner">{{ page.title }}</h2>
-  <div>
+  <section>
+    {% include artwork-card.html artwork=page %}
+  </section>
+  <section>
     {{ page.content }}
-  </div>
+  </section>
 </div>
