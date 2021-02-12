@@ -1,11 +1,12 @@
 ---
-date: 2020-11-16T21:22:16-08:00
 title: rock experiment 1
-modified: 2020-11-16T21:23:24-08:00
-missing-images: false
-tags: sculpture wires
+date: 2020-11-16
+description: My first stone-based sculpture, a central rock connected to two other smaller white rocks, elevated on a "rough" plaster base.
+alt-text: A river rock and two other smaller white rocks are elevated by rods on a platform, connected with a wire.
+flavor-text: Connected? No, it's feeding off those plantery resources.
+series:
+collections: Junior-Review
+tags: sculpture
+featured: true
 ---
 My first experimentation with stone carving.
-
-![Image]({% asset_path artwork__rock_experiment_1--01.jpg %})
-![Image](../assets/media/artwork__rock_experiment_1--02.jpg)
