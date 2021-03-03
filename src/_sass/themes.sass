@@ -1,0 +1,17 @@
+$primary: $yellow
+
+body
+  background-color: tint($primary, 90)
+
+#wrapper
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5)
+  & > header
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5)
+    z-index: 1
+  & > main
+    background-color: $primary
+
+.container
+  border-top: 1px solid $gray-light
+  border-bottom: 1px solid $gray-dark
+  background-color: $gray
