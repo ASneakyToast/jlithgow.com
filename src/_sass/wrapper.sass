@@ -4,29 +4,61 @@
   grid-template-rows: auto 1fr auto auto
 
   & > header
-    grid-area: head
+    grid-area: h
 
   & > main
-    grid-area: main
+    grid-area: m
 
   & .nav-bottom
-    grid-area: nav-bottom
+    grid-area: nb
 
   & .nav-drawer
-    grid-area: nav-drawer
+    grid-area: nd
 
   & > footer
-    grid-area: footer
+    grid-area: f
 
 @media screen and (max-width: $screen-mobile)
   #wrapper
     width: 100%
     margin: 0
     padding: 0
-    grid-template-areas: "head" "main" "footer" "nav-bottom"
+    grid-template-areas: "h" "m" "f" "nb"
 
 @media screen and (max-width: $screen-mobile--landscape) and (orientation: landscape)
   #wrapper
     width: 360px
     margin: 0 auto
     padding: 0
+    grid-template-areas: "h" "m" "f" "nb"
+
+@media screen and (min-width: $screen-mobile) and (max-width: $screen-tablet)
+  #wrapper
+    width: 80vw
+    margin: 0 auto
+    padding: 0
+    grid-template-areas: "h" "m" "f" "nb"
+
+@media screen and (min-width: $screen-tablet) and (max-width: $screen-laptop)
+  #wrapper
+    width: 100%
+    padding: 0
+    grid-template-areas: "nb h" "nb m" "nb f"
+    grid-template-columns: 24vh 1fr
+
+@media screen and (min-width: $screen-laptop) and (max-width: $screen-desktop)
+  #wrapper
+    width: 100%
+    margin: 0 auto
+    padding: 0
+    grid-template-areas: "nb h" "nb m" "nb f"
+    grid-template-columns: 33vh 1fr
+
+@media screen and (min-width: $screen-desktop)
+  #wrapper
+    width: $screen-laptop
+    margin: 0 auto
+    padding: 0
+    grid-template-areas: "h" "m" "f" "nb"
+    grid-template-columns: 1fr
+
