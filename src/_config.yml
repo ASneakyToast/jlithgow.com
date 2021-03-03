@@ -10,6 +10,8 @@ destination:
 
 permalink: pretty
 
+enviroment: dev
+
 defaults:
   - scope:
       path: ""
