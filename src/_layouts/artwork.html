@@ -3,11 +3,15 @@ layout: default
 ---
 <link rel="stylesheet" href="/assets/css/artwork-detail.css">
 
-<div class="containerz">
-  <h2 class="banner">{{ page.title }}</h2>
-  <section>
+<div class="container">
+  <header class="banner">
+    <h2>{{ page.title }}</h2>
+  </header>
+
+  <section class="basic">
     {% include artwork-promo.html artwork=page %}
   </section>
+
   <section>
     {{ page.content }}
   </section>

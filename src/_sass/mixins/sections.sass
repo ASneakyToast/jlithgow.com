@@ -2,9 +2,20 @@
   section.large
     max-height: 80vh
 
-@media screen and (min-width: $screen-mobile)
+@media screen and (min-width: $screen-mobile+1)
   section.large
     height: 80vh
 
+section.small
+  max-height: 33vh
+
 article.card
   justify-self: center
+
+section.basic 
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: minmax(0, max-content)
+  column-gap: 6px
+  row-gap: 6px
+  padding: 6px

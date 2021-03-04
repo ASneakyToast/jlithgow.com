@@ -6,31 +6,31 @@
 {% endif %}
 {% assign artwork = include.artwork %}
 
-<article class="artwork_item container-small">
-  <section>
-    {% if include.label %}
-      <h3 class="artwork_item__type">- {{ label }}<span class="syantax-colon">:</span></h3>
-    {% endif %}
-    <a href="{{ artwork.url }}">
-      <h4 class="artwork_item__title button-inline">{{ artwork.title }}</h4>
-    </a>
-  </section>
+<a href="{{ artwork.url }}">
+  <article class="artwork_item container-small">
+      <section>
+        {% if include.label %}
+          <h3 class="artwork_item__type">- {{ label }}<span class="syantax-colon">:</span></h3>
+        {% endif %}
+          <h4 class="artwork_item__title button-inline">{{ artwork.title }}</h4>
+      </section>
 
-  {% if artwork.missing-images == false %}
-  <a href="{{ artwork.url }}">
-    <img class="artwork_item__image" src="{% asset_path card.jpg {{ artwork.id }} %}">
-  </a>
-  {% endif %}
+      {% if artwork.missing-images == false %}
+        <section class="small">
+          <img class="artwork_item__image" src="{% asset_path card.jpg {{ artwork.id }} %}">
+        </section>
+      {% endif %}
 
-  {{ artwork.excerpt }}
+      {{ artwork.excerpt }}
 
-  {% if meta == true %}
-    {% if artwork.tags != empty %}
-      <ul class="artwork_item__tags">
-        {% for tag in artwork.tags %}
-          <li class="artwork_item__tag">{{ tag }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-  {% endif %}
-</article>
+      {% if meta == true %}
+        {% if artwork.tags != empty %}
+          <ul class="artwork_item__tags">
+            {% for tag in artwork.tags %}
+              <li class="artwork_item__tag">{{ tag }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endif %}
+  </article>
+</a>
