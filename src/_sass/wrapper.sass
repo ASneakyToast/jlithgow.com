@@ -37,21 +37,21 @@
     width: 100%
     padding: 0
     grid-template-areas: "nb h" "nb m" "nb f"
-    grid-template-columns: min-max(auto, 20vw) 1fr
+    grid-template-columns: min-max(auto, 33vw) 1fr
 
 @media screen and (min-width: $screen-tablet+1) and (max-width: $screen-laptop)
   #wrapper
     width: 100%
-    padding: 0
-    grid-template-areas: "nb h" "nb m" "nb f"
-    grid-template-columns: 24vh 1fr
+    padding: 0 auto
+    grid-template-areas: "nd h" "nd m" "nd f"
+    grid-template-columns: 33vh 1fr
 
 @media screen and (min-width: $screen-laptop+1) and (max-width: $screen-desktop)
   #wrapper
     width: 100%
     margin: 0 auto
     padding: 0
-    grid-template-areas: "nb h" "nb m" "nb f"
+    grid-template-areas: "nd h" "nd m" "nd f"
     grid-template-columns: 33vh 1fr
 
 @media screen and (min-width: $screen-desktop+1)
@@ -59,6 +59,6 @@
     width: $screen-laptop
     margin: 0 auto
     padding: 0
-    grid-template-areas: "h" "m" "f" "nb"
+    grid-template-areas: "nd h" "nd m" "nd f"
     grid-template-columns: 1fr
 

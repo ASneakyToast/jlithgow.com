@@ -1,36 +1,52 @@
 @import "mixins/buttons"
 
-.nav-drawer
-  display: none
-  height: 100%
-  width: 100%
-  position: fixed
-  z-index: 20
-  &--open
-    display: flex
-
-  &__nav
+@media screen and (min-width: $screen-tablet+1)
+  .nav-drawer
     background-color: $yellow
-    flex: 3
-    color: $yellow
-    box-shadow: $shadow-6dp
+    display: flex
+    height: 100%
+    &__nav
+      width: 33vw
+      & > main
+        position: sticky
+        top: 0
+    &__offclick
+      display: none
+  .nav-bottom
+    display: none
 
-    & section
-      display: grid
-      row-gap: 8px
+@media screen and (max-width: $screen-tablet)
+  .nav-drawer
+    display: none
+    height: 100%
+    width: 100%
+    position: fixed
+    z-index: 20
+    &--open
+      display: flex
 
-  &__offclick
-    background: rgba(0,0,0,0.5)
-    flex: 1
+    &__nav
+      background-color: $yellow
+      flex: 3
+      color: $yellow
+      box-shadow: $shadow-6dp
 
-.nav-bottom 
-  box-sizing: border-box
-  display: grid
-  grid-template-columns: auto 1fr auto
-  background-color: $yellow
-  width: 100%
-  position: sticky
-  bottom: 0
-  box-shadow: $shadow-6dp--flipped
-  padding: 8px
-  z-index: 16
+      & section
+        display: grid
+        row-gap: 8px
+
+    &__offclick
+      background: rgba(0,0,0,0.5)
+      flex: 1
+
+  .nav-bottom 
+    box-sizing: border-box
+    display: grid
+    grid-template-columns: auto 1fr auto
+    background-color: $yellow
+    width: 100%
+    position: sticky
+    bottom: 0
+    box-shadow: $shadow-6dp--flipped
+    padding: 8px
+    z-index: 16
