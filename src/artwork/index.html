@@ -37,7 +37,7 @@ title: Artwork
   <section class="basic">
     {% assign artwork-sample = site.artwork | sample %}
     <h3>Sample( {{ artwork-sample.title }} )</h3>
-    {% include artwork-card.html artwork=artwork-sample %}
+    {% include artwork-promo.html artwork=artwork-sample %}
   </section>
 
   <hr></hr>
@@ -47,7 +47,7 @@ title: Artwork
     <ul>
       {% assign artwork-latest = site.artwork | sort: 'date' | reverse %}
       {% for artwork in artwork-latest limit:3 %}
-        <li>{% include artwork-item.html artwork=artwork %}</li>
+        <li>{% include artwork-item.html artwork=artwork meta=false %}</li>
       {% endfor %}
     </ul>
   </section>

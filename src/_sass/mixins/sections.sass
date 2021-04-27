@@ -2,20 +2,55 @@
   section.large
     max-height: 66vh
 
+  section.overlay-br
+    & > aside
+      bottom: 16px
+      right: 16px
+
 @media screen and (min-width: $screen-mobile+1)
   section.large
-    height: 66vh
+    max-height: 66vh
+
+  section.overlay-br
+    & > aside
+      bottom: 24px
+      right: 24px
 
 section.small
   max-height: 33vh
 
+section.large
+  & > img
+    max-height: inherit
+
+section.row-scrolling
+  display: flex
+  gap: 16px
+  overflow-x: scroll
+  & > img
+    max-width: 80%
+
+section.halfs
+  grid-template-columns: 1fr 1fr
+  & > aside
+    justify-self: right
+
+section.plate
+  grid-template-columns: 1fr 3fr
+
 article.card
   justify-self: center
 
-section.basic 
+section.well 
   display: grid
   grid-template-columns: 1fr
   grid-template-rows: minmax(0, max-content)
   column-gap: 6px
   row-gap: 6px
   padding: 6px
+
+section.overlay
+  position: relative
+  & > aside
+    position: absolute
+

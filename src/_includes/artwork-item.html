@@ -15,13 +15,9 @@
           <h4 class="artwork_item__title button-inline">{{ artwork.title }}</h4>
       </section>
 
-      {% if artwork.missing-images == false %}
-        <section class="small">
-          <img class="artwork_item__image" src="{% asset_path card.jpg {{ artwork.id }} %}">
-        </section>
-      {% endif %}
-
-      {{ artwork.excerpt }}
+      <section class="small">
+        <img class="artwork_item__image" src="{% asset_path pin.jpg {{ artwork.id }} %}">
+      </section>
 
       {% if meta == true %}
         {% if artwork.tags != empty %}

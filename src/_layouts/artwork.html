@@ -6,13 +6,105 @@ layout: default
 <div class="container">
   <header class="banner">
     <h2>{{ page.title }}</h2>
+    {% if page.series != "none" %}
+      <h3><a href="/artwork/series/{{ page.series }}">
+        >{{ page.series }}
+      </a></h3>
+    {% endif %}
   </header>
 
-  <section class="basic">
-    {% include artwork-promo.html artwork=page %}
+  <section class="overlay overlay-br">
+    <main>
+      <img src="{% asset_path cover.jpg {{ page.id }} %}"></img>
+    </main>
+    <aside>
+      <a href="{% asset_path original.{{ page.original-file }} {{ page.id }} %}" target="_blank">
+        <button class="primary">see original</button>
+      </a>
+    </aside>
+  </section>
+</div>
+
+<div class="container theme-primary">
+  <section>
+    <h2>{{ page.title }}</h2> 
   </section>
 
-  <section>
+  <section class="well">
+    {% if page.series != "none" %}
+      <p>> {{ page.series }}</p>
+    {% endif %}
+    <p>- {{ page.date }}</p> 
+    <p>- {{ page.size }}</p> 
+  </section>
+
+  <p>{{ page.description }}</p> 
+  <p><i>{{ page.flavor-text }}</i></p> 
+
+  {% if page.collections != "none" or page.tags != empty %}
+    <section>
+      <h4>Appears in</h4>
+
+      {% if page.collections != "none" %}
+        <ul> 
+          {% for collection in page.collections %}
+            <a href="/artwork/collections/{{ collection }}" target="_blank">
+              <li class="secondary">{{ collection }}</li>
+            </a>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </section>
+
+    {% if page.tags != empty %}
+      <ul class="inline">
+        {% for tag in page.tags %}
+          <a href="/artwork/collections/{{ collection }}" target="_blank">
+            <li class="secondary">#{{ tag }}</li>
+          </a>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endif %}
+
+  <footer>
+    <a href="{% asset_path original.{{ page.original-file }} {{ page.id }} %}" target="_blank">
+      <button class="secondary">see original</button>
+    </a>
+  </footer>
+</div>
+
+<!-- TODO: Fix this -->
+{% if page.content != "none" %}
+  <div class="container">
     {{ page.content }}
+  </div>
+{% endif %}
+
+{% if page.card-amount != 0 %}
+  <div id="cards" class="container">
+    <section class="row-scrolling">
+      {% for card-num in (1..page.card-amount) %}
+        <img src="{% asset_path cards/card-{{ card-num }}.jpg {{ page.id }} %}"></img>
+      {% endfor %}
+    </section>
+  </div>
+{% endif %}
+
+<div id="breakcrumbs" class="container">
+  <section class="halfs">
+    <a href="/artworks/">
+      <button class="secondary">
+        artworks
+      </button>
+    </a>
+    <aside>
+      <!-- TODO: fix random / next feature -->
+      <a href="{{ site.artwork | sample | relative_url }}">
+        <button class="secondary">
+          random
+        </button>
+      </a>
+    </aside>
   </section>
 </div>

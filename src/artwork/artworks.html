@@ -9,7 +9,7 @@ permalink: /artworks/
 <link rel="stylesheet" href="/assets/css/artworks.css">
 
 
-<div class="containerz artworks">
+<div class="container artworks">
   <a href="/artwork/" class="banner">
     <h3>Artwork -</h3>
     <h2 class="">> Artworks</h2>
@@ -18,7 +18,7 @@ permalink: /artworks/
     <!--<button class="button-secondary">Filter</button>-->
   </h3>
 
-  <div class="">
+  <div class>
     <ul class="container-small">
       {% for artwork in site.artwork %}
         <li>{% include artwork-list.html artwork=artwork %}</li>
@@ -27,6 +27,6 @@ permalink: /artworks/
   </div>
 
   <a href="/artwork" class="containerz__footer">
-    <p class="button-inline">read about my art practice</p>
+    <button class="secondary">read about my art practice</button>
   </a>
 </div>
