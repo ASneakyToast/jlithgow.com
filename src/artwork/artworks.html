@@ -3,30 +3,39 @@ title: artwork__all
 layout: default
 permalink: /artworks/
 ---
+<!--
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
+-->
 
 <link rel="stylesheet" href="/assets/css/artworks.css">
 
 
-<div class="container artworks">
-  <a href="/artwork/" class="banner">
-    <h3>Artwork -</h3>
-    <h2 class="">> Artworks</h2>
-  </a>
+<div class="container theme--primary">
+  <header class="banner">
+    <a href="/artwork/">
+      <h3>Artwork -</h3>
+      <h2>> Artworks</h2>
+    </a>
+  </header>
+
   <h3>{{ site.artwork | size }} results
     <!--<button class="button-secondary">Filter</button>-->
   </h3>
 
-  <div class>
-    <ul class="container-small">
+  <section>
+    <ul>
       {% for artwork in site.artwork %}
-        <li>{% include artwork-list.html artwork=artwork %}</li>
+        <li>{% include artwork-item.html artwork=artwork %}</li>
       {% endfor %}
     </ul>
-  </div>
+  </section>
 
-  <a href="/artwork" class="containerz__footer">
-    <button class="secondary">read about my art practice</button>
-  </a>
+  <hr></hr>
+
+  <footer>
+    <a href="/artwork">
+      <button class="primary">read about my art practice</button>
+    </a>
+  </footer>
 </div>
