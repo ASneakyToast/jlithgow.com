@@ -1,10 +1,19 @@
 {% assign label = include.label %}
+
 {% if include.meta == false %}
   {% assign meta = include.meta %}
 {% else %}
   {% assign meta = true %}
 {% endif %}
+
 {% assign artwork = include.artwork %}
+
+{% if include.lazy == true %}
+  {% assign lazy = include.lazy %}
+{% else %}
+  {% assign lazy = false %}
+{% endif %}
+
 
 <a href="{{ artwork.url }}">
   <article class="artwork_item container-small">
@@ -16,7 +25,11 @@
       </section>
 
       <section class="small">
-        <img class="artwork_item__image" src="{% asset_path pin.jpg {{ artwork.id }} %}">
+        {% if lazy %}
+          <img class="artwork_item__image lazy" src="/assets/media/placeholder.jpg" data-src="{% asset_path pin.jpg {{ artwork.id }} %}">
+        {% else %}
+          <img class="artwork_item__image" src="{% asset_path pin.jpg {{ artwork.id }} %}">
+        {% endif %}
       </section>
 
       {% if meta == true %}

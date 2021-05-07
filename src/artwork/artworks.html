@@ -26,7 +26,7 @@ permalink: /artworks/
   <section>
     <ul>
       {% for artwork in site.artwork %}
-        <li>{% include artwork-item.html artwork=artwork %}</li>
+        <li>{% include artwork-item.html artwork=artwork lazy=true %}</li>
       {% endfor %}
     </ul>
   </section>
@@ -39,3 +39,5 @@ permalink: /artworks/
     </a>
   </footer>
 </div>
+
+<script src="/assets/js/lazy.js"></script> 
