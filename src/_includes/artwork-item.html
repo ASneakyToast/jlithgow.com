@@ -16,7 +16,7 @@
 
 
 <a href="{{ artwork.url }}">
-  <article class="artwork_item container-small">
+  <article id="{{ artwork.id }}" class="artwork_item container-small">
       <section>
         {% if include.label %}
           <h3 class="artwork_item__type">- {{ label }}<span class="syantax-colon">:</span></h3>
@@ -26,9 +26,9 @@
 
       <section class="small">
         {% if lazy %}
-          <img class="artwork_item__image lazy" src="/assets/media/placeholder.jpg" data-src="{% asset_path pin.jpg {{ artwork.id }} %}">
+          <img class="fit artwork_item__image lazy" src="/assets/media/placeholder.jpg" data-src="{% asset_path pin.jpg {{ artwork.id }} %}">
         {% else %}
-          <img class="artwork_item__image" src="{% asset_path pin.jpg {{ artwork.id }} %}">
+          <img class="fit artwork_item__image" src="{% asset_path pin.jpg {{ artwork.id }} %}">
         {% endif %}
       </section>
 
