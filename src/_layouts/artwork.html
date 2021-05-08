@@ -5,12 +5,10 @@ layout: default
 
 <div class="container">
   <header class="banner">
-    <h2>{{ page.title }}</h2>
-    {% if page.series != "none" %}
-      <h3><a href="/artwork/series/{{ page.series }}">
-        >{{ page.series }}
-      </a></h3>
-    {% endif %}
+    <h3><a href="/artworks/#{{ page.id }}">
+      / artworks
+    </a></h3>
+    <h2>> {{ page.title }}</h2>
   </header>
 
   <section class="overlay overlay-br">
